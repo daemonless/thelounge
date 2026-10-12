@@ -1,0 +1,4 @@
+#!/bin/sh
+# Daemonless standard healthcheck for thelounge
+
+fetch -qo /dev/null "http://127.0.0.1:9000/" >/dev/null 2>&1

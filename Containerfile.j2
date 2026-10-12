@@ -1,0 +1,56 @@
+ARG BASE_VERSION=15.1
+FROM ghcr.io/daemonless/base:${BASE_VERSION}
+
+ARG THELOUNGE_VERSION=4.6.0-pre.1
+
+ARG FREEBSD_ARCH=amd64
+ARG UPSTREAM_URL="https://api.github.com/repos/thelounge/thelounge/releases/latest"
+ARG UPSTREAM_JQ=".tag_name"
+ARG HEALTHCHECK_ENDPOINT="http://localhost:9000/"
+ARG PACKAGES="python3 py312-setuptools py312-build git node22 yarn-node22"
+
+LABEL org.opencontainers.image.title="Thelounge" \
+      org.opencontainers.image.description="The self-hosted web IRC client" \
+      org.opencontainers.image.source="https://github.com/daemonless/thelounge" \
+      org.opencontainers.image.url="https://thelounge.chat/" \
+      org.opencontainers.image.documentation="https://thelounge.chat/" \
+      org.opencontainers.image.licenses="MIT" \
+      org.opencontainers.image.vendor="daemonless" \
+      org.opencontainers.image.authors="daemonless" \
+      io.daemonless.category="Utilities" \
+      io.daemonless.port="9000" \
+      io.daemonless.volumes="/var/opt/thelounge" \
+      io.daemonless.arch="${FREEBSD_ARCH}" \
+      io.daemonless.pkg-source="pkg" \
+      io.daemonless.base="node" \
+      io.daemonless.upstream-url="${UPSTREAM_URL}" \
+      io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
+      io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
+      io.daemonless.packages="${PACKAGES}"
+
+
+ENV THELOUNGE_HOME "/var/opt/thelounge"
+
+ENV NODE_ENV production
+
+RUN pkg update && pkg install -y python3 ${PACKAGES} && \
+    yarn --non-interactive --frozen-lockfile global add thelounge@${THELOUNGE_VERSION} && \
+    yarn --non-interactive cache clean && \
+    pkg clean -a && \
+    rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
+    find /usr/local -name '*.a' -delete && \
+    rm -rf /usr/local/share/doc /usr/local/share/man /usr/local/include /usr/local/llvm19/include /usr/local/llvm19/bin && \
+    rm -rf /usr/local/libexec/gcc14 /usr/local/bin/*-portbld-freebsd* /usr/local/*-portbld-freebsd* && \
+    rm -f /usr/local/bin/gcc* /usr/local/bin/g++* /usr/local/bin/gfortran* /usr/local/bin/cpp* /usr/local/bin/c++* && \
+    rm -f /usr/local/lib/libopcodes* /usr/local/lib/libbfd*
+
+RUN install -d -o bsd -g bsd "${THELOUNGE_HOME}" && chown -R bsd:bsd "${THELOUNGE_HOME}"
+
+VOLUME "${THELOUNGE_HOME}"
+
+EXPOSE 9000
+
+COPY root/ /
+
+RUN chmod +x /etc/services.d/thelounge/run /healthz
+
