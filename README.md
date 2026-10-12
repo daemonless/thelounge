@@ -5,23 +5,23 @@ Source: dbuild templates
 
 # Thelounge
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/daemonless-thelounge/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/daemonless-thelounge/actions)
-[![Last Commit](https://img.shields.io/github/last-commit/daemonless/daemonless-thelounge?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/daemonless-thelounge/commits)
-[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/daemonless-thelounge?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/daemonless-thelounge)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/thelounge/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/thelounge/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/daemonless/thelounge?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/thelounge/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/thelounge?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/thelounge)
 
 The self-hosted web IRC client on FreeBSD.
 
 | | |
 |---|---|
 | **Port** | 9000 |
-| **Registry** | `ghcr.io/kareiva/daemonless-thelounge` |
+| **Registry** | `ghcr.io/daemonless/thelounge` |
 | **Source** | [https://github.com/thelounge/thelounge](https://github.com/thelounge/thelounge) |
 | **Website** | [https://thelounge.chat/](https://thelounge.chat/) |
 
 ## Version Tags
 | Tag | Description | Best For |
 | :--- | :--- | :--- |
-| `latest` | **FreeBSD Port**. Built from latest FreeBSD packages. | Most users — recommended. |
+| `latest` | **Upstream Binary**. Built from official release. | Most users — recommended. |
 
 ## Prerequisites
 Before deploying, ensure your host environment is ready. See the [Quick Start Guide](https://daemonless.io/guides/quick-start) for host setup instructions.
@@ -32,15 +32,15 @@ Before deploying, ensure your host environment is ready. See the [Quick Start Gu
 
 ```yaml
 services:
-  daemonless-thelounge:
-    image: "ghcr.io/kareiva/daemonless-thelounge:latest"
-    container_name: daemonless-thelounge
+  thelounge:
+    image: "ghcr.io/daemonless/thelounge:latest"
+    container_name: thelounge
     environment:
       - PUID=1000  # User ID for the application process
       - PGID=1000  # Group ID for the application process
       - TZ=UTC  # Timezone for the container
     volumes:
-      - "/containers/daemonless-thelounge/thelounge:/var/opt/thelounge"
+      - "/containers/thelounge/thelounge:/var/opt/thelounge"
     ports:
       - "9000:9000"
     # always (not unless-stopped) so FreeBSD's podman rc.d auto-starts it at boot
@@ -55,7 +55,7 @@ Save as `compose.yaml`, then run `podman-compose up -d`.
 ```
 # .env
 
-DIRECTOR_PROJECT=daemonless-thelounge
+DIRECTOR_PROJECT=thelounge
 PUID=1000
 PGID=1000
 TZ=UTC
@@ -70,8 +70,8 @@ options:
   - alias:
   - ip4_inherit:
 services:
-  daemonless-thelounge:
-    name: daemonless_thelounge
+  thelounge:
+    name: thelounge
     options:
       - container: 'args:--pull'
       - expose: '9000:9000 proto:tcp'
@@ -82,10 +82,10 @@ services:
         - PGID: !ENV '${PGID}'
         - TZ: !ENV '${TZ}'
     volumes:
-      - daemonless-thelounge_thelounge: /var/opt/thelounge
+      - thelounge_thelounge: /var/opt/thelounge
 volumes:
-  daemonless-thelounge_thelounge:
-    device: '/containers/daemonless-thelounge/thelounge'
+  thelounge_thelounge:
+    device: '/containers/thelounge/thelounge'
 ```
 
 **Makejail**:
@@ -97,7 +97,7 @@ ARG tag=latest
 
 OPTION container=boot
 OPTION overwrite=force
-OPTION from=ghcr.io/kareiva/daemonless-thelounge:${tag}
+OPTION from=ghcr.io/daemonless/thelounge:${tag}
 ```
 
 Save the files above, then run `appjail-director up`.
@@ -115,9 +115,9 @@ Save the files above, then run `appjail-director up`.
 
 ```yaml
 services:
-  daemonless-thelounge:
-    name: daemonless-thelounge
-    image: "ghcr.io/kareiva/daemonless-thelounge:latest"
+  thelounge:
+    name: thelounge
+    image: "ghcr.io/daemonless/thelounge:latest"
     network:
       - mode: host
     environment:
@@ -125,7 +125,7 @@ services:
       - PGID=1000
       - TZ=UTC
     volumes:
-      - "/containers/daemonless-thelounge/thelounge:/var/opt/thelounge"
+      - "/containers/thelounge/thelounge:/var/opt/thelounge"
 ```
 
 Save as `bastille-compose.yml`, then run `bastille up`.
@@ -157,3 +157,7 @@ Access at: `http://localhost:9000`
 **Architectures:** amd64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
+
+---
+
+Need help? Join our [Discord](https://discord.gg/Kb9tkhecZT) community.
