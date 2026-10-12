@@ -5,16 +5,16 @@ Source: dbuild templates
 
 # Thelounge
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/daemonless-thelounge/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/daemonless-thelounge/actions)
-[![Last Commit](https://img.shields.io/github/last-commit/daemonless/daemonless-thelounge?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/daemonless-thelounge/commits)
-[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/daemonless-thelounge?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/daemonless-thelounge)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/daemonless/thelounge/build.yaml?style=flat-square&label=Build&color=green)](https://github.com/daemonless/thelounge/actions)
+[![Last Commit](https://img.shields.io/github/last-commit/daemonless/thelounge?style=flat-square&label=Last+Commit&color=blue)](https://github.com/daemonless/thelounge/commits)
+[![OCI Pulls](https://img.shields.io/docker/pulls/daemonless/thelounge?style=flat-square&label=OCI+Pulls&color=blue)](https://hub.docker.com/r/daemonless/thelounge)
 
 The self-hosted web IRC client on FreeBSD.
 
 | | |
 |---|---|
 | **Port** | 9000 |
-| **Registry** | `ghcr.io/kareiva/daemonless-thelounge` |
+| **Registry** | `ghcr.io/daemonless/thelounge` |
 | **Source** | [https://github.com/thelounge/thelounge](https://github.com/thelounge/thelounge) |
 | **Website** | [https://thelounge.chat/](https://thelounge.chat/) |
 
