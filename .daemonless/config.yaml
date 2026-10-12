@@ -1,0 +1,15 @@
+# dbuild configuration file
+# Place in .daemonless/config.yaml or .dbuild.yaml (higher priority)
+#
+# Full reference: https://github.com/daemonless/dbuild
+
+build:
+  variants:
+    - tag: latest
+      containerfile: Containerfile
+
+cit:
+  mode: health
+  port: 9000
+  health: /
+  

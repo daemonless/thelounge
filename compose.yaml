@@ -1,0 +1,45 @@
+name: thelounge
+
+x-daemonless:
+  title: "Thelounge"
+  category: "Utilities"
+  description: "The self-hosted web IRC client on FreeBSD."
+  upstream_url: "https://github.com/thelounge/thelounge"
+  web_url: "https://thelounge.chat/"
+  user: "bsd"
+  icon: ":thelounge:"
+  mlock: false
+  upstream_binary: true
+
+  appjail:
+    director:
+      options:
+        - "alias:"
+        - "ip4_inherit:"
+ 
+  docs:
+    env:
+      PUID: "User ID for the application process"
+      PGID: "Group ID for the application process"
+      TZ: "Timezone for the container"
+    volumes:
+      /var/opt/thelounge: "Data and configuration directory"
+    ports:
+      9000: "Thelounge port"
+
+services:
+  thelounge:
+    image: ghcr.io/daemonless/thelounge:latest
+    container_name: thelounge
+    restart: unless-stopped
+    
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+
+    volumes:
+      - /path/to/containers/thelounge:/var/opt/thelounge
+
+    ports:
+      - "9000:9000"
