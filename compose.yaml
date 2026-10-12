@@ -9,7 +9,7 @@ x-daemonless:
   user: "bsd"
   icon: ":thelounge:"
   mlock: false
-  upstream_binary: false
+  upstream_binary: true
 
   appjail:
     director:
