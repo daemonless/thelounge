@@ -27,7 +27,6 @@ LABEL org.opencontainers.image.title="Thelounge" \
       io.daemonless.port="9000" \
       io.daemonless.volumes="/var/opt/thelounge" \
       io.daemonless.arch="${FREEBSD_ARCH}" \
-      io.daemonless.pkg-source="pkg" \
       io.daemonless.base="node" \
       io.daemonless.upstream-url="${UPSTREAM_URL}" \
       io.daemonless.upstream-jq="${UPSTREAM_JQ}" \
