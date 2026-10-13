@@ -10,13 +10,14 @@ x-daemonless:
   icon: ":thelounge:"
   mlock: false
   upstream_binary: true
+  cli: [thelounge]
 
   appjail:
     director:
       options:
         - "alias:"
         - "ip4_inherit:"
- 
+
   docs:
     env:
       PUID: "User ID for the application process"
@@ -32,7 +33,7 @@ services:
     image: ghcr.io/daemonless/thelounge:latest
     container_name: thelounge
     restart: unless-stopped
-    
+
     environment:
       - PUID=1000
       - PGID=1000

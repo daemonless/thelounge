@@ -60,3 +60,6 @@ EXPOSE 9000
 COPY root/ /
 
 RUN chmod +x /etc/services.d/thelounge/run /healthz
+
+# CLIs run as the app user under podman exec (x-daemonless.cli)
+RUN daemonless-cli --install thelounge
