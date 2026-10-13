@@ -36,6 +36,7 @@ ENV NODE_OPTIONS=--disable-warning=ExperimentalWarning
 RUN pkg update && pkg install -y python3 ${PACKAGES} && \
     yarn --non-interactive --frozen-lockfile global add thelounge@${THELOUNGE_VERSION} && \
     yarn --non-interactive cache clean && \
+    mkdir -p /app && echo "${THELOUNGE_VERSION}" > /app/version && chmod -R a+rX /app && \
     pkg clean -a && \
     rm -rf /var/cache/pkg/* /var/db/pkg/repos/* && \
     find /usr/local -name '*.a' -delete && \
