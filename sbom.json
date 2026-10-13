@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-13T08:37:32Z",
+  "generated": "2026-10-13T14:44:01Z",
   "image": "thelounge",
   "tags": {
     "latest": {
-      "app_version": "15.1",
+      "app_version": "4.6.0-pre.1",
       "arch": "amd64",
-      "generated": "2026-10-13T08:36:45Z",
+      "generated": "2026-10-13T14:43:06Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
