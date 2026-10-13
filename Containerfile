@@ -37,6 +37,7 @@ LABEL org.opencontainers.image.title="Thelounge" \
 ENV THELOUNGE_HOME "/var/opt/thelounge"
 
 ENV NODE_ENV production
+ENV NODE_OPTIONS=--disable-warning=ExperimentalWarning
 
 RUN pkg update && pkg install -y python3 ${PACKAGES} && \
     yarn --non-interactive --frozen-lockfile global add thelounge@${THELOUNGE_VERSION} && \
