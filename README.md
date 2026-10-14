@@ -74,7 +74,6 @@ services:
     name: thelounge
     options:
       - container: 'args:--pull'
-      - expose: '9000:9000 proto:tcp'
     oci:
       user: root
       environment:
@@ -154,7 +153,7 @@ Access at: `http://localhost:9000`
 |------|----------|-------------|
 | `9000` | TCP | Thelounge port |
 
-**Architectures:** amd64
+**Architectures:** amd64, aarch64
 **User:** `bsd` (UID/GID via PUID/PGID, defaults to 1000:1000)
 **Base:** FreeBSD 15.1
 
