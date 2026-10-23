@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-14T09:29:52Z",
+  "generated": "2026-10-23T10:36:02Z",
   "image": "thelounge",
   "tags": {
     "latest-aarch64": {
       "app_version": "4.6.0-pre.1",
       "arch": "aarch64",
-      "generated": "2026-10-14T09:29:17Z",
+      "generated": "2026-10-23T10:35:29Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -238,7 +238,7 @@
               "PD"
             ],
             "name": "FreeBSD-zoneinfo",
-            "version": "15.1p4"
+            "version": "15.1p5"
           },
           {
             "licenses": [
@@ -266,7 +266,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.130"
+            "version": "3.131"
           },
           {
             "licenses": [
@@ -281,13 +281,6 @@
             ],
             "name": "curl",
             "version": "8.22.0"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "execline",
-            "version": "2.9.8.1"
           },
           {
             "licenses": [
@@ -586,7 +579,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.14_1"
+            "version": "3.12.15"
           },
           {
             "licenses": [
@@ -597,25 +590,11 @@
           },
           {
             "licenses": [
-              "ISCL"
-            ],
-            "name": "s6",
-            "version": "2.14.0.1"
-          },
-          {
-            "licenses": [
               "MIT",
               "APACHE20"
             ],
             "name": "simdjson",
-            "version": "5.0.1"
-          },
-          {
-            "licenses": [
-              "ISCL"
-            ],
-            "name": "skalibs",
-            "version": "2.14.5.1"
+            "version": "5.0.5"
           },
           {
             "licenses": [
@@ -873,7 +852,7 @@
           {
             "name": "core-js",
             "purl": "",
-            "version": "3.50.0"
+            "version": "3.51.0"
           },
           {
             "name": "core-util-is",
@@ -1243,7 +1222,7 @@
           {
             "name": "jose",
             "purl": "",
-            "version": "6.2.12"
+            "version": "6.2.13"
           },
           {
             "name": "json-buffer",
@@ -1688,7 +1667,7 @@
           {
             "name": "undici",
             "purl": "",
-            "version": "6.29.0"
+            "version": "6.29.1"
           },
           {
             "name": "undici-types",
@@ -1856,7 +1835,7 @@
       "source": "upstream",
       "summary": {
         "dotnet": 0,
-        "freebsd": 89,
+        "freebsd": 86,
         "go": 0,
         "java": 0,
         "node": 224,
@@ -1864,7 +1843,7 @@
         "python": 5,
         "ruby": 0,
         "rust": 10,
-        "total": 328
+        "total": 325
       }
     }
   }
