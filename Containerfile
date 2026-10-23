@@ -5,7 +5,7 @@
 # --------------------------------------------------------------------------
 
 ARG BASE_VERSION=15.1
-FROM ghcr.io/daemonless/base:${BASE_VERSION}
+FROM ghcr.io/daemonless/base-exec:${BASE_VERSION}
 
 ARG THELOUNGE_VERSION=4.6.0-pre.1
 
@@ -33,7 +33,6 @@ LABEL org.opencontainers.image.title="Thelounge" \
       io.daemonless.healthcheck-url="${HEALTHCHECK_ENDPOINT}" \
       io.daemonless.packages="${PACKAGES}"
 
-
 ENV THELOUNGE_HOME "/var/opt/thelounge"
 
 ENV NODE_ENV production
@@ -58,8 +57,11 @@ VOLUME "${THELOUNGE_HOME}"
 EXPOSE 9000
 
 COPY root/ /
+RUN chmod +x /daemonless/libexec/thelounge /daemonless/init.d/*
 
-RUN chmod +x /etc/services.d/thelounge/run /healthz
+CMD ["/daemonless/libexec/thelounge"]
+
+RUN chmod +x /healthz
 
 # CLIs run as the app user under podman exec (x-daemonless.cli)
 RUN daemonless-cli --install thelounge

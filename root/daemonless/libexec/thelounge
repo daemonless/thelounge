@@ -1,0 +1,10 @@
+#!/bin/sh
+# Start thelounge; /init has already dropped to the run user.
+
+export HOME=/config
+
+echo "[INFO] Starting thelounge..."
+
+cd /config
+exec \
+    /usr/local/bin/thelounge start

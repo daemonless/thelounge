@@ -1,0 +1,6 @@
+#!/bin/sh
+# THELOUNGE_HOME is the data volume (not /config), owned by the build-time
+# bsd (1000): follow a PUID change, or thelounge can't write logs/packages.
+if [ "$(id -u)" = 0 ] && [ "$(stat -f %u "$THELOUNGE_HOME")" != "$(id -u bsd)" ]; then
+    chown -R bsd:bsd "$THELOUNGE_HOME"
+fi
