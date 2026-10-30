@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-23T10:36:02Z",
+  "generated": "2026-10-30T23:35:44Z",
   "image": "thelounge",
   "tags": {
     "latest-aarch64": {
       "app_version": "4.6.0-pre.1",
       "arch": "aarch64",
-      "generated": "2026-10-23T10:35:29Z",
+      "generated": "2026-10-30T23:35:05Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -189,7 +189,7 @@
               "BSD2CLAUSE"
             ],
             "name": "FreeBSD-runtime",
-            "version": "15.1p5"
+            "version": "15.1p6"
           },
           {
             "licenses": [
@@ -682,7 +682,7 @@
           {
             "name": "@types/node",
             "purl": "",
-            "version": "26.6.5"
+            "version": "26.6.6"
           },
           {
             "name": "@types/responselike",
@@ -1177,7 +1177,7 @@
           {
             "name": "ip-address",
             "purl": "",
-            "version": "10.7.4"
+            "version": "10.7.5"
           },
           {
             "name": "ipaddr.js",
@@ -1222,7 +1222,7 @@
           {
             "name": "jose",
             "purl": "",
-            "version": "6.2.13"
+            "version": "6.2.14"
           },
           {
             "name": "json-buffer",
