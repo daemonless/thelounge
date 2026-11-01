@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-30T22:56:15Z",
+  "generated": "2026-11-01T16:47:55Z",
   "image": "thelounge",
   "tags": {
     "latest-amd64": {
-      "app_version": "4.6.0-pre.1",
+      "app_version": "4.6.0-pre.2",
       "arch": "amd64",
-      "generated": "2026-10-30T22:55:17Z",
+      "generated": "2026-11-01T16:47:15Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -432,7 +432,7 @@
               "MIT"
             ],
             "name": "node22",
-            "version": "22.23.2_2"
+            "version": "22.23.4"
           },
           {
             "licenses": [
@@ -705,11 +705,6 @@
             "version": "1.3.8"
           },
           {
-            "name": "ansi-styles",
-            "purl": "",
-            "version": "4.3.0"
-          },
-          {
             "name": "array-flatten",
             "purl": "",
             "version": "1.1.1"
@@ -795,11 +790,6 @@
             "version": "1.0.4"
           },
           {
-            "name": "chalk",
-            "purl": "",
-            "version": "4.1.2"
-          },
-          {
             "name": "cheerio",
             "purl": "",
             "version": "1.0.0"
@@ -813,16 +803,6 @@
             "name": "clone-response",
             "purl": "",
             "version": "1.0.3"
-          },
-          {
-            "name": "color-convert",
-            "purl": "",
-            "version": "2.0.1"
-          },
-          {
-            "name": "color-name",
-            "purl": "",
-            "version": "1.1.4"
           },
           {
             "name": "commander",
@@ -1110,11 +1090,6 @@
             "version": "1.0.4"
           },
           {
-            "name": "has-flag",
-            "purl": "",
-            "version": "4.0.0"
-          },
-          {
             "name": "has-property-descriptors",
             "purl": "",
             "version": "1.0.2"
@@ -1247,12 +1222,12 @@
           {
             "name": "linkify-it",
             "purl": "",
-            "version": "3.0.3"
+            "version": "5.0.2"
           },
           {
             "name": "lodash",
             "purl": "",
-            "version": "4.17.21"
+            "version": "4.18.1"
           },
           {
             "name": "lowercase-keys",
@@ -1332,12 +1307,7 @@
           {
             "name": "node-forge",
             "purl": "",
-            "version": "1.3.1"
-          },
-          {
-            "name": "node-forge-flash",
-            "purl": "",
-            "version": "0.0.0"
+            "version": "1.4.0"
           },
           {
             "name": "normalize-url",
@@ -1615,11 +1585,6 @@
             "version": "6.3.0"
           },
           {
-            "name": "supports-color",
-            "purl": "",
-            "version": "7.2.0"
-          },
-          {
             "name": "text-decoding",
             "purl": "",
             "version": "1.0.0"
@@ -1627,7 +1592,7 @@
           {
             "name": "thelounge",
             "purl": "",
-            "version": "4.6.0-pre.1"
+            "version": "4.6.0-pre.2"
           },
           {
             "name": "tlds",
@@ -1662,7 +1627,7 @@
           {
             "name": "uc.micro",
             "purl": "",
-            "version": "1.0.6"
+            "version": "2.1.0"
           },
           {
             "name": "undici",
@@ -1838,12 +1803,12 @@
         "freebsd": 86,
         "go": 0,
         "java": 0,
-        "node": 224,
+        "node": 217,
         "php": 0,
         "python": 5,
         "ruby": 0,
         "rust": 10,
-        "total": 325
+        "total": 318
       }
     }
   }
