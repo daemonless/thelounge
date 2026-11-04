@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-01T17:31:09Z",
+  "generated": "2026-11-04T15:31:21Z",
   "image": "thelounge",
   "tags": {
     "latest-aarch64": {
       "app_version": "4.6.0-pre.2",
       "arch": "aarch64",
-      "generated": "2026-11-01T17:30:35Z",
+      "generated": "2026-11-04T15:30:36Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -252,7 +252,7 @@
               "MIT"
             ],
             "name": "brotli",
-            "version": "1.2.0,1"
+            "version": "1.2.1,1"
           },
           {
             "licenses": [
@@ -266,7 +266,7 @@
               "MPL20"
             ],
             "name": "ca_root_nss",
-            "version": "3.131"
+            "version": "3.132"
           },
           {
             "licenses": [
@@ -280,7 +280,7 @@
               "MIT"
             ],
             "name": "curl",
-            "version": "8.22.0"
+            "version": "8.23.0"
           },
           {
             "licenses": [
@@ -432,7 +432,7 @@
               "MIT"
             ],
             "name": "node22",
-            "version": "22.23.2_1"
+            "version": "22.23.4"
           },
           {
             "licenses": [
@@ -502,7 +502,7 @@
               "MPL20"
             ],
             "name": "p5-Mozilla-CA",
-            "version": "20260813"
+            "version": "20261020"
           },
           {
             "licenses": [
@@ -1152,7 +1152,7 @@
           {
             "name": "ip-address",
             "purl": "",
-            "version": "10.7.5"
+            "version": "10.7.6"
           },
           {
             "name": "ipaddr.js",
@@ -1197,7 +1197,7 @@
           {
             "name": "jose",
             "purl": "",
-            "version": "6.2.14"
+            "version": "6.2.15"
           },
           {
             "name": "json-buffer",
