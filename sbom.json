@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-01T16:47:55Z",
+  "generated": "2026-11-04T14:47:28Z",
   "image": "thelounge",
   "tags": {
     "latest-amd64": {
       "app_version": "4.6.0-pre.2",
       "arch": "amd64",
-      "generated": "2026-11-01T16:47:15Z",
+      "generated": "2026-11-04T14:46:36Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -287,7 +287,7 @@
               "MIT"
             ],
             "name": "expat",
-            "version": "2.8.4"
+            "version": "2.9.0"
           },
           {
             "licenses": [
@@ -601,7 +601,7 @@
               "PD"
             ],
             "name": "sqlite3",
-            "version": "3.53.4,1"
+            "version": "3.54.1,1"
           },
           {
             "licenses": [
@@ -1152,7 +1152,7 @@
           {
             "name": "ip-address",
             "purl": "",
-            "version": "10.7.5"
+            "version": "10.7.6"
           },
           {
             "name": "ipaddr.js",
@@ -1197,7 +1197,7 @@
           {
             "name": "jose",
             "purl": "",
-            "version": "6.2.14"
+            "version": "6.2.15"
           },
           {
             "name": "json-buffer",
