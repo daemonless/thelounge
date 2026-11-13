@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-04T14:47:28Z",
+  "generated": "2026-11-13T23:45:37Z",
   "image": "thelounge",
   "tags": {
     "latest-amd64": {
       "app_version": "4.6.0-pre.2",
       "arch": "amd64",
-      "generated": "2026-11-04T14:46:36Z",
+      "generated": "2026-11-13T23:44:52Z",
       "packages": {
         "dotnet": [],
         "freebsd": [
@@ -502,7 +502,7 @@
               "MPL20"
             ],
             "name": "p5-Mozilla-CA",
-            "version": "20261020"
+            "version": "20261105"
           },
           {
             "licenses": [
@@ -579,7 +579,7 @@
               "PSFL"
             ],
             "name": "python312",
-            "version": "3.12.15"
+            "version": "3.12.16"
           },
           {
             "licenses": [
@@ -927,7 +927,7 @@
           {
             "name": "encodeurl",
             "purl": "",
-            "version": "1.0.2"
+            "version": "1.0.4"
           },
           {
             "name": "encoding-sniffer",
@@ -1197,7 +1197,7 @@
           {
             "name": "jose",
             "purl": "",
-            "version": "6.2.15"
+            "version": "6.2.17"
           },
           {
             "name": "json-buffer",
